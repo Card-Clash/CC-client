@@ -9,7 +9,7 @@ export class Preloader extends Scene {
     const bg = this.add.image(
       this.cameras.main.width / 2,
       this.cameras.main.height / 2,
-      "background"
+      "background",
     );
     let scaleX = this.cameras.main.width / bg.width + 0.2;
     let scaleY = this.cameras.main.height / bg.height + 0.2;
@@ -22,7 +22,7 @@ export class Preloader extends Scene {
         Number(this.game.config.width) * 0.5,
         Number(this.game.config.height) * 0.5,
         468,
-        32
+        32,
       )
       .setStrokeStyle(1, 0xffffff);
 
@@ -32,7 +32,7 @@ export class Preloader extends Scene {
       Number(this.game.config.height) * 0.5,
       4,
       28,
-      0xffffff
+      0xffffff,
     );
 
     //  Use the 'progress' event emitted by the LoaderPlugin to update the loading bar
@@ -78,4 +78,3 @@ export class Preloader extends Scene {
     this.scene.start("MainMenu");
   }
 }
-

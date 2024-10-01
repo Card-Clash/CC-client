@@ -9,7 +9,7 @@ export class MainMenu extends Scene {
     const bg = this.add.image(
       this.cameras.main.width / 2.8,
       this.cameras.main.height / 2,
-      "background"
+      "background",
     );
     let scaleX = this.cameras.main.width / bg.width + 0.2;
     let scaleY = this.cameras.main.height / bg.height + 0.2;
@@ -34,4 +34,3 @@ export class MainMenu extends Scene {
     });
   }
 }
-

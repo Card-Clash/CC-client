@@ -22,7 +22,7 @@ const initiateDiscordSDK = async () => {
     discordSdk = new DiscordSDKMock(
       import.meta.env.VITE_CLIENT_ID,
       mockGuildId,
-      mockChannelId
+      mockChannelId,
     );
     const discriminator = String(mockUserId.charCodeAt(0) % 5);
 
@@ -58,7 +58,7 @@ enum SessionStorageQueryParam {
 }
 
 function getOverrideOrRandomSessionValue(
-  queryParam: `${SessionStorageQueryParam}`
+  queryParam: `${SessionStorageQueryParam}`,
 ) {
   const overrideValue = queryParams.get(queryParam);
   if (overrideValue != null) {
