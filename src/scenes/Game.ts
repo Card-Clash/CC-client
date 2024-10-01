@@ -9,18 +9,30 @@ export class Game extends Scene {
   }
 
   async create() {
-    const height: number = this.cameras.main.height;
-    const width: number = this.cameras.main.width;
+    const HEIGHT: number = this.cameras.main.height;
+    const WIDTH: number = this.cameras.main.width;
     this.scene.launch("background");
-    
-    this.add.rectangle(width * 0.1, height * 0.2,
-                       width * 0.15, height * 0.6, 0xFF0000).setOrigin(0);
 
-    this.add.rectangle(width * 0.75, height * 0.2,
-                       width * 0.15, height * 0.6, 0x00FF00).setOrigin(0);
+    this.add
+      .rectangle(
+        WIDTH * 0.1,
+        HEIGHT * 0.2,
+        WIDTH * 0.15,
+        HEIGHT * 0.6,
+        0xff0000,
+      )
+      .setOrigin(0);
 
-    this.add.rectangle(0, height * 0.65,
-                       width, height, 0xCCCCCC).setOrigin(0);
-    
+    this.add
+      .rectangle(
+        WIDTH * 0.75,
+        HEIGHT * 0.2,
+        WIDTH * 0.15,
+        HEIGHT * 0.6,
+        0x00ff00,
+      )
+      .setOrigin(0);
+
+    this.add.rectangle(0, HEIGHT * 0.65, WIDTH, HEIGHT, 0xcccccc).setOrigin(0);
   }
 }
